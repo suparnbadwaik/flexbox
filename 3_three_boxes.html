@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .column-layout {
+            display: flex;
+            
+            /*  to change height as per the content
+                by default flex assigns same height even 
+                if content is less or more.
+                The top edge is even for all the elements (in the same line)
+
+                align-items: flex-start;
+            */
+            /*  to change height as per the content
+                by default flex assigns same height even 
+                if content is less or more.
+                The bottom edge is even for all the elements (in the same line)
+
+                align-items: flex-end;
+            */
+
+            /*  to change height as per the content
+                by default flex assigns same height even 
+                if content is less or more.
+                The bottom edge is even for all the elements (in the same line)
+
+                align-items: center;
+            */
+
+            /* default behaviour */
+            align-items: stretch;
+
+            /* 
+            elements displayed from the start - horizontally
+
+            justify-content: flex-start;
+            */
+
+            /* 
+            elements displayed from the end - horizontally
+            
+            justify-content: flex-end;
+            */
+
+            /* 
+            elements displayed in the center - horizontally
+            
+            justify-content: center;
+            */
+
+            /* gives equal space between the elements and aligns them properly */
+            justify-content: space-between;
+
+            padding: 10px;
+            background-color: gray;
+        }
+
+        .column-layout .contacts {
+            /* width: 30%;
+            or */
+            flex-basis: 30%;
+
+            border-radius: 10px;
+        }
+
+        .contacts:nth-child(1) {background-color: cornflowerblue;}
+        .contacts:nth-child(2) {background-color: orange;}
+        .contacts:nth-child(3) {background-color: green;}
+    </style>
+</head>
+<body>
+    <div class="column-layout">
+        <div class="contacts">
+            <h3>Contact 1</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="contacts">
+            <h3>Contact 2</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="contacts">
+            <h3>Contact 3</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </div>
+
+
+    <h3>Original</h3>
+    <div class="column-layout-1">
+            <div class="contacts">
+                <h3>Contact 1</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="contacts">
+                <h3>Contact 2</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <div class="contacts">
+                <h3>Contact 3</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+        </div>
+</body>
+</html>

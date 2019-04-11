@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .column-layout {
+            /*  For responsive I dont want to specify display flex since I want the original layout for smaller screens. 
+                So we speciy flex for screens greater than 900 or eg.
+                So comment it out and write media query for it. */
+            /*
+            display: flex;*/
+            justify-content: space-between;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        .column-layout .contacts {
+            /* width: 30%;
+            or */
+            flex-basis: 30%;
+
+            border-radius: 10px;
+        }
+
+        .contacts:nth-child(1) {background-color: cornflowerblue;}
+        .contacts:nth-child(2) {background-color: orange;}
+        .contacts:nth-child(3) {background-color: green;}
+
+        @media (min-width: 900px) {
+            .column-layout {
+                display: flex;
+            }
+        }
+
+        .number-container {
+            display: flex;
+        }
+
+        .numbers {
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            text-align: center;
+            background-color: chocolate;
+            padding:20px;
+            margin:20px;
+            width:150px;
+            height:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="column-layout">
+        <div class="contacts">
+            <h3>Contact 1</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="contacts">
+            <h3>Contact 2</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="contacts">
+            <h3>Contact 3</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </div>
+    </div>
+    <div class="number-container">
+        <div class="numbers">1</div>
+        <div class="numbers">2</div>
+        <div class="numbers">3</div>
+        <div class="numbers">4</div>
+        <div class="numbers">5</div>
+    </div>
+</body>
+</html>
